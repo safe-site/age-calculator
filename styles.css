@@ -1,0 +1,218 @@
+/* CSS for Age Calculator */
+
+/* General styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: grey;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 7px;
+
+  background-image: linear-gradient(216deg, rgba(77, 77, 77,0.05) 0%, rgba(77, 77, 77,0.05) 25%,rgba(42, 42, 42,0.05) 25%, rgba(42, 42, 42,0.05) 38%,rgba(223, 223, 223,0.05) 38%, rgba(223, 223, 223,0.05) 75%,rgba(36, 36, 36,0.05) 75%, rgba(36, 36, 36,0.05) 100%),linear-gradient(44deg, rgba(128, 128, 128,0.05) 0%, rgba(128, 128, 128,0.05) 34%,rgba(212, 212, 212,0.05) 34%, rgba(212, 212, 212,0.05) 57%,rgba(25, 25, 25,0.05) 57%, rgba(25, 25, 25,0.05) 89%,rgba(135, 135, 135,0.05) 89%, rgba(135, 135, 135,0.05) 100%),linear-gradient(241deg, rgba(55, 55, 55,0.05) 0%, rgba(55, 55, 55,0.05) 14%,rgba(209, 209, 209,0.05) 14%, rgba(209, 209, 209,0.05) 60%,rgba(245, 245, 245,0.05) 60%, rgba(245, 245, 245,0.05) 69%,rgba(164, 164, 164,0.05) 69%, rgba(164, 164, 164,0.05) 100%),linear-gradient(249deg, rgba(248, 248, 248,0.05) 0%, rgba(248, 248, 248,0.05) 32%,rgba(148, 148, 148,0.05) 32%, rgba(148, 148, 148,0.05) 35%,rgba(202, 202, 202,0.05) 35%, rgba(202, 202, 202,0.05) 51%,rgba(181, 181, 181,0.05) 51%, rgba(181, 181, 181,0.05) 100%),linear-gradient(92deg, hsl(214,0%,11%),hsl(214,0%,11%));
+}
+
+.calculator {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1, h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  text-align: center;
+  border-bottom: 2px solid #ccc;
+  margin-bottom: 20px;
+}
+
+/* Age Calculator styles */
+.calculator {
+  margin-bottom: 50px;
+  background-color: lightgrey;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#result {
+  display: none;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: white;
+  color: black;
+  font-weight: 600;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#result.show {
+  display: block;
+}
+
+.input-group {
+  margin-bottom: 0px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.input-group > * {
+  margin-right: 10px;
+}
+
+.input-group label {
+  margin-top: 5px;
+  margin-right: 10px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.input-group input[type="date"] {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: white;
+  font-size: 18px;
+  font-weight: 600;
+  color: #333333;
+}
+
+#calculate-btn {
+  background: linear-gradient(45deg, rgba(0, 0, 0, 1), rgba(0, 0, 438, 1));
+  background-color: ;
+  border: 1px solid black;
+  color: white;
+  padding: 5px 15px;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#calculate-btn:hover{
+background: linear-gradient(45deg, #1a1b4a, #01021a);
+transition: all 1s ease;
+}
+
+   #ageOnResult::afterm {
+      content: "";  
+       display: block;  
+        height: 1px;   
+        margin-top: 15px;   
+        margin-bottom: 15px;   
+        background-color: #ccc; } 
+
+/* Media queries */
+@media screen and (max-width: 768px) {
+  .input-group {
+    flex-direction: column;
+  }
+  
+  .input-group > * {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  
+  .input-group label {
+    margin-right: 0;
+  }
+  
+  .input-group input[type="date"] {
+    width: 100%;
+  }
+  
+  .btn-calculate {
+    width: 100%;
+  }
+  #calculate-btn {
+  width: 100%;
+  }
+}
+
+#ageResult {
+  text-align: center;
+  font-size: 24px;
+  margin-top: 0px;
+  font-weight: bold;
+}
+
+#ageResult {
+  animation-name: colorChange;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  color: rgb(255, 174, 0); /* Initial color, adjust as needed */
+}
+
+@keyframes colorChange {
+  from {
+    color: rgb(0, 255, 42); /* Initial color */
+  }
+  to {
+    color: rgb(8, 88, 248); /* Target color */
+  }
+}
+
+
+
+
+footer { 
+ position: fixed; 
+ left: 0; 
+ bottom: 0; 
+ width: 100%; 
+ background-color: #2f3134; 
+ text-align: center; 
+ z-index: 1; 
+ } 
+  
+  
+  
+ footer p {  
+  color: white;  
+  font-size: 18px;  
+  text-shadow: 2px 2px 2px #000000;  
+  margin-left: 0px;  
+  margin-right: 0px;  
+  text-align: center;  
+  } 
+  
+  
+  
+ .my-link { 
+   color: #029bed; 
+   text-decoration: none; 
+ } 
+  
+ .my-link:hover, 
+ .my-link:focus, 
+ .my-link:active, 
+ .my-link:visited { 
+   text-decoration: none; 
+ }
+
+.my-link2 { 
+   color: black; 
+   text-decoration: none; 
+ }
+
+#share-container {
+   display: none;
+   justify-content: end;
+   align-items: end;
+
+}
+
+#share-btn {
+  color: white;
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: #25d366;
+}
